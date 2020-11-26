@@ -1,7 +1,7 @@
 .hero {
   @include flexLayout;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./images/comp.jpg") center/cover no-repeat;
+    url("../images/comp.jpg") center/cover no-repeat;
   width: 100%;
   height: 80vh;
 
