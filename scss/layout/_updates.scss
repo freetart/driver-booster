@@ -1,0 +1,20 @@
+.updates {
+  @include sectionSpacing;
+  @include flexLayout;
+  text-align: center;
+  background-color: color(lightBlack);
+  color: color(white);
+
+  .update {
+    h2 {
+      @include headingStyles;
+      font-size: size(lg);
+    }
+
+    p {
+      font-size: size(sm);
+      width: 70%;
+      margin: 2rem auto;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.feature {
+  @include sectionSpacing;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid color(lightGray);
+
+  @include response(md) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features-img-container {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 50rem;
+      height: auto;
+
+      @include response(xl) {
+        width: 40rem;
+      }
+
+      @include response(lg) {
+        width: 30rem;
+      }
+
+      @include response(sm) {
+        width: 25rem;
+      }
+    }
+  }
+
+  .features-content {
+    text-align: center;
+
+    h2 {
+      @include headingStyles;
+      font-size: size(xl);
+
+      @include response(lg) {
+        font-size: size(lg);
+      }
+    }
+
+    p {
+      width: 80%;
+      margin: 2rem auto;
+      font-size: size(sm);
+      letter-spacing: 0.1rem;
+      line-height: 1.8;
+
+      @include response(lg) {
+        font-size: size(xs);
+      }
+
+      @include response(xs) {
+        width: 95%;
+      }
+    }
+  }
+}

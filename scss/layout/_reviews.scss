@@ -1,0 +1,41 @@
+.reviews {
+  @include flexLayout;
+  @include sectionSpacing;
+  text-align: center;
+
+  .review-img-container {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+      object-fit: cover;
+    }
+  }
+
+  .review {
+    h3 {
+      @include headingStyles;
+      font-size: size(xl);
+      margin-top: 5rem;
+    }
+
+    p {
+      width: 70%;
+      margin: 2rem auto;
+      font-size: size(sm);
+      line-height: 2.5;
+      font-style: italic;
+
+      @include response(sm) {
+        width: 85%;
+      }
+    }
+
+    span {
+      font-size: size(xl);
+      color: color(darkRed);
+    }
+  }
+}

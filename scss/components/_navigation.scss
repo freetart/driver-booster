@@ -1,0 +1,60 @@
+.nav {
+  background-color: color(lightBlack);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    @include response(lg) {
+      margin: 0 auto;
+    }
+
+    &-heading {
+      color: color(darkRed);
+      font-size: size(xl);
+      padding-right: 2rem;
+      border-right: 0.1rem solid color(darkGray);
+
+      @include response(xs) {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    p {
+      color: color(lightGray);
+      font-size: size(xs) - 0.5rem;
+      padding-left: 2rem;
+
+      @include response(lg) {
+        font-size: size(md);
+      }
+
+      @include response(xs) {
+        display: none;
+      }
+    }
+  }
+
+  &-links {
+    font-size: size(xs);
+
+    a {
+      color: color(white);
+      margin-right: 2rem;
+      transition: all 0.5s;
+
+      &:hover {
+        color: color(darkRed);
+      }
+
+      @include response(lg) {
+        display: none;
+      }
+    }
+  }
+}

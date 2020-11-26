@@ -1,0 +1,141 @@
+.footer {
+  // @include sectionSpacing;
+  padding: 5rem 0 2rem 0;
+  background-color: color(lightBlack);
+  color: lighten(color(DarkGray), 30%);
+
+  a {
+    color: lighten(color(DarkGray), 15%);
+    transition: 0.3s;
+
+    &:hover {
+      color: color(darkRed);
+    }
+  }
+
+  &-top {
+    @include flexLayout;
+    border-bottom: 0.1rem solid color(darkRed);
+
+    h3 {
+      @include headingStyles;
+      font-size: size(lg);
+    }
+
+    input {
+      margin-top: 2rem;
+      padding: 1rem;
+      width: 45%;
+      border-radius: 1rem;
+      border: 0.3rem solid darken(color(darkRed), 10%);
+      background-color: color(darkGray);
+      color: color(white);
+      outline: none;
+      margin-bottom: 2rem;
+      transition: all 0.5s;
+
+      @include response(md) {
+        width: 70%;
+      }
+
+      @include response(sm) {
+        width: 80%;
+      }
+
+      &:focus {
+        background-color: color(white);
+        color: color(lightBlack);
+      }
+    }
+
+    .btn {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: size(xs);
+      margin-bottom: 2rem;
+
+      @include response(md) {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  }
+
+  &-mid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 2rem 0;
+    border-bottom: 0.1rem solid color(darkRed);
+
+    @include response(md) {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: size(lg);
+      color: color(darkRed);
+      text-align: center;
+
+      @include response(md) {
+        display: none;
+      }
+    }
+  }
+
+  &-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+    @include response(xl) {
+      grid-template-columns: 1fr 1fr;
+      padding-left: 2rem;
+    }
+
+    @include response(md) {
+      grid-template-columns: 1fr;
+    }
+
+    h3 {
+      font-size: size(sm);
+      margin-bottom: 1rem;
+    }
+
+    a {
+      font-size: size(xs) - 0.2rem;
+    }
+
+    .social-links-ul {
+      display: flex;
+
+      i {
+        margin-right: 2rem;
+        font-size: size(sm);
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2rem;
+
+    @include response(sm) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    p {
+      font-size: size(xs) - 0.1rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      font-size: size(xs) - 0.3rem;
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.btn {
+  font-size: size(sm);
+  font-family: "Open Sans", sans-serif;
+  padding: 0.5rem;
+  background: transparent;
+  color: color(white);
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  border: 0.1rem solid color(white);
+  border-radius: 1rem;
+  outline: none;
+  width: 20rem;
+  cursor: pointer;
+  transition: all 0.6s;
+
+  @include response(sm) {
+    width: 15rem;
+  }
+
+  &:hover {
+    background-color: darken(color(darkRed), 10%);
+  }
+}

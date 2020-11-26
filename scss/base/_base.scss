@@ -1,0 +1,41 @@
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+// GLOBAL
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+// GLOBAL CLASSES
+
+.content-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@include response(xs) {
+  html {
+    font-size: 55%;
+  }
+}

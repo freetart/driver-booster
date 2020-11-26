@@ -1,0 +1,40 @@
+.hero {
+  @include flexLayout;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/comp.jpg") center/cover no-repeat;
+  width: 100%;
+  height: 80vh;
+
+  &-content {
+    text-align: center;
+
+    h1 {
+      @include headingStyles;
+      font-size: size(xl) + 3rem;
+      color: color(white);
+
+      @include response(md) {
+        font-size: size(xl);
+      }
+    }
+
+    h3 {
+      @include headingStyles;
+      font-size: size(md);
+      color: color(white);
+      margin: 2rem auto;
+      width: 70%;
+    }
+
+    .btn {
+      margin: 2rem 2rem 2rem 0;
+    }
+
+    p {
+      font-size: size(xs);
+      color: color(white);
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+  }
+}

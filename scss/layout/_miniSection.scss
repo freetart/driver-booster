@@ -1,0 +1,24 @@
+.mini-section {
+  @include flexLayout;
+  @include sectionSpacing;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/comp2.jpg") center/cover no-repeat fixed;
+  color: color(white);
+
+  &-content {
+    h3 {
+      @include headingStyles;
+      font-size: size(xl);
+    }
+
+    p {
+      font-size: size(sm);
+      margin: 2rem 0;
+    }
+
+    .btn {
+      margin: 2rem 2rem 2rem auto;
+    }
+  }
+}

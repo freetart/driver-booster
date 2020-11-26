@@ -1,0 +1,25 @@
+$colors: (
+  darkGray: #464655,
+  // lightGray: #abadbe,
+  lightGray: #e5e8f0,
+  darkRed: #a91f20,
+  lightRed: #de2020,
+  lightBlack: #191920,
+  white: #fff,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$font-sizes: (
+  xl: 3rem,
+  lg: 2.5rem,
+  md: 2rem,
+  sm: 1.8rem,
+  xs: 1.6rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}
